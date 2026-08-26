@@ -1,0 +1,59 @@
+NIFTY 100 RATIO ENGINE EDGE CASE LOG
+============================================================
+
+high_leverage_flag
+  False: 1130
+  True: 31
+
+icr_warning_flag
+  False: 1007
+  True: 154
+
+revenue_cagr_3yr_flag
+  INSUFFICIENT: 2
+
+revenue_cagr_5yr_flag
+  INSUFFICIENT: 2
+
+revenue_cagr_10yr_flag
+  INSUFFICIENT: 50
+  ZERO_BASE: 11
+
+pat_cagr_3yr_flag
+  TURNAROUND: 67
+  DECLINE_TO_LOSS: 24
+  INSUFFICIENT: 2
+
+pat_cagr_5yr_flag
+  TURNAROUND: 75
+  DECLINE_TO_LOSS: 24
+  INSUFFICIENT: 2
+
+pat_cagr_10yr_flag
+  INSUFFICIENT: 50
+  TURNAROUND: 48
+  DECLINE_TO_LOSS: 24
+  ZERO_BASE: 11
+
+eps_cagr_3yr_flag
+  TURNAROUND: 60
+  DECLINE_TO_LOSS: 24
+  INSUFFICIENT: 9
+
+eps_cagr_5yr_flag
+  TURNAROUND: 68
+  DECLINE_TO_LOSS: 24
+  INSUFFICIENT: 15
+
+eps_cagr_10yr_flag
+  INSUFFICIENT: 50
+  TURNAROUND: 48
+  DECLINE_TO_LOSS: 24
+  ZERO_BASE: 23
+
+Classification:
+INSUFFICIENT = insufficient historical data
+ZERO_BASE = zero starting value
+TURNAROUND = negative to positive
+DECLINE_TO_LOSS = positive to negative
+BOTH_NEGATIVE = negative to negative

@@ -1,0 +1,22 @@
+.PHONY: load ratios test report dashboard api clean
+
+load:
+	python -m src.etl.loader
+
+ratios:
+	python -m src.analytics.ratios
+
+test:
+	pytest -q
+
+report:
+	python -m src.reporting.report
+
+dashboard:
+	streamlit run src/dashboard/app.py
+
+api:
+	uvicorn src.api.main:app --reload
+
+clean:
+	powershell -Command "Get-ChildItem -Recurse -Directory -Filter __pycache__ | Remove-Item -Recurse -Force"
